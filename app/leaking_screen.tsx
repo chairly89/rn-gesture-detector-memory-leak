@@ -6,6 +6,10 @@ const testImageUrl = "https://www.js-craft.io/_public-files/cat.png";
 
 const panGesture = Gesture.Pan();
 
+/**
+ * Anything placed inside this screen will leak after the Gesture Detector has been
+ * interacted with and then the back button is pressed.
+ */
 export default function LeakingScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "red" }}>
